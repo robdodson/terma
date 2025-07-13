@@ -1,7 +1,3 @@
-# Research Task
-
-Research this: $ARGUMENTS
-
 Create a subagent and use ultra thinking within the agent to preserve our context window.
 
 # Thought Process
@@ -100,19 +96,42 @@ Don't feel the need to try and make up for confusion or strange territory. Let's
 
 All problems can be solved easily if the task breakdown and scoping are performed correctly. We have to get these parts right and understand if we're veering off track and what to do about it.
 
-# Research
+# Explore
 
-Research the codebase to find out the answer to this question. When I say research, this means first explore the SPEC.md, the LOG.md, any recent progress reports (`progress/`) to understand if this question has been changed recently, then explore as much of the codebase as is necessary to get a thorough understanding of the answer to the question. Consider reading the tests as a way of understanding what features and assertions we already make about the codebase, and we should understand if the tests are passing if the research question is implicitly covered by one of the test cases.
+Familiarize yourself with this project to understand its structure, purpose, and conventions.
 
-Write the results in `research/YYYYMMDD_QUESTION.md` where the filename is dynamic.
+## Starting Points
 
-## File Structure
+1. Read `README.md` for project overview
+2. Read `CLAUDE.md` for development guidelines and conventions
+3. Check for other documentation (docs/, CONTRIBUTING.md, etc.)
 
-`SPEC.md` - Application specification
-`LOG.md` - Development log
-`BUGS.md` - Defect reports
-`progress/` - Reports on previous work sessions
-`research/` - Answers to research questions
-`MOD.md` - Scattered in the codebase, explains modules
-`README.md` - Explains tooling and usage
-`CLAUDE.md` or `llms.txt` - Instructions for Language Model agents
+## Explore Key Areas
+
+Based on what you find, investigate:
+
+* Project structure and main entry points
+* Core functionality and architecture
+* Build/test/deploy processes
+* Key dependencies and technologies used
+* Any unique patterns or conventions
+
+## Use Additional Subagents When Helpful
+
+For complex codebases, consider using additional subagents to:
+
+* Investigate specific subsystems in detail
+* Verify technical details you're uncertain about
+* Explore areas that require deeper analysis
+
+## Create a Brief Report
+
+Summarize your findings, focusing on:
+
+* What this project does (1-2 sentences)
+* Key technical stack and architecture
+* Important patterns or conventions to follow
+* How to build, test, and run the project
+* Any potential gotchas or areas of complexity
+
+Keep the report concise and actionable - aim for information that helps us start working effectively.
