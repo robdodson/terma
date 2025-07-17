@@ -1,6 +1,4 @@
-Create a subagent and use ultra thinking within the agent to preserve our context window.
-
-# Thought Process
+Create a subagent and think hard within the agent to preserve our context window.
 
 # Development Thought Process
 

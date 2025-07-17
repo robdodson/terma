@@ -11,38 +11,50 @@ Copy/clone the contents of `out` into `~/.claude/commands` to install these acro
 
 ## Quick Start
 
-Use `/explore` to begin each session. Use `/research :question` to probe the codebase and write a report to `/research`. Then, use `/plan` or just `/feature` to plan a change to the application.
+Currently available commands:
 
-Use `/implement` to spin up one or more well-instructed subagents to implement the plan.
+- `/explore` - Begin each session with this command to understand the codebase
+- `/plan` - Plan changes to the application before implementation
+- `/fix-issue` - Fix reported bugs or issues
 
-You may find use for `/debug`, `/code-review`, `/harden` after implementation.
-
-When you are at a known good start (i.e. about to commit) use `/progress` to write a progress report and update `LOG.md`, then commit w/ the `.md` file included. `/next-up` is like `/progress` but moves straight on to whatever additional task you provide.
-
-You can use `/bug-report` to interactively gather and record context for known issues, and use `/resolve` to resolve them.
+Additional commands are in development in the `archive/` directory and will be released in future updates.
 
 We currently assume a protocol of `LOG.md`, `BUGS.md`, `SPEC.md`, `CLAUDE.md` etc. but this will and should be customized to fit.
 
-## Patterns
+## Development Workflow
 
-- feature dev: `/explore`, `/feature`, `/implement`, `/progress`, `/compact` (loop)
+With the current commands:
 
-  - then: `/code-review`
+- **Understanding a codebase**: Start with `/explore` to get familiar with the project structure and conventions
+- **Planning changes**: Use `/plan` to outline implementation approach before coding
+- **Fixing issues**: Use `/fix-issue` to address bugs or problems systematically
 
-- bugs: `/bug-report`, `/debug`, `/resolve`, `/code-review`
+Future workflow patterns (coming soon):
 
-- tech spike: `/prototype`, `/debug`
-
-- improve codebase architecture: `/explore`, `/research`, `/decompose`, `/code-review`
+- Feature development: explore → plan → implement → review
+- Bug fixes: report → debug → resolve → review
+- Architecture improvements: explore → research → decompose → review
 
 ## Customizing
 
 The build depends on `deno`.
 You can edit anything in `lib` or the root and run and use `./build.sh` to rebuild all. We use a simple `remark` transform for text inclusion, nothing fancy.
 
-## Trivia
+## Roadmap
 
-The `subagent.md` file encourages "ultrathinking", which may burn through usage quickly. Consider customizing it manually until we have variables.
+Commands currently in development (see `archive/` directory):
+
+- `/research` - Deep investigation of specific codebase aspects
+- `/implement` - Spawn subagents for implementation
+- `/debug`, `/code-review`, `/harden` - Quality assurance commands
+- `/progress`, `/next-up` - Progress tracking and logging
+- `/bug-report`, `/resolve` - Bug management workflow
+- `/prototype` - Technology spike experiments
+- `/decompose` - Architecture improvements
+
+## Notes
+
+The `subagent.md` file in the archive encourages "heavy thinking", which may burn through usage quickly. Consider customizing it manually when these commands are released.
 
 ## License
 
