@@ -1,9 +1,4 @@
-Please analyze and fix the GitHub issue: $ARGUMENTS.
-
-Start by researching the issue:
-
-* Use `gh issue view` to get the issue details
-* Analyze the problem and identify all components that need changes
+Let's work on a feature: $ARGUMENTS
 
 # PR Strategy
 

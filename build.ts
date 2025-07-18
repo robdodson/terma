@@ -25,7 +25,9 @@ function remarkInclude() {
 
           // Check for circular includes
           if (processingFiles.has(fullPath)) {
-            console.warn(`Warning: Circular include detected for ${includePath}`);
+            console.warn(
+              `Warning: Circular include detected for ${includePath}`
+            );
             return;
           }
 
@@ -35,7 +37,10 @@ function remarkInclude() {
             // Process included content with same processor (recursive)
             processingFiles.add(fullPath);
             const processor = remark().use(remarkInclude);
-            const result = processor.processSync({ value: content, path: fullPath });
+            const result = processor.processSync({
+              value: content,
+              path: fullPath,
+            });
             processingFiles.delete(fullPath);
 
             const parsed = processor.parse(String(result));
@@ -46,7 +51,9 @@ function remarkInclude() {
             }
           } catch (err) {
             processingFiles.delete(fullPath);
-            console.warn(`Warning: Could not include ${includePath}: ${err.message}`);
+            console.warn(
+              `Warning: Could not include ${includePath}: ${err.message}`
+            );
           }
         }
       }
@@ -69,7 +76,9 @@ if (import.meta.main) {
   const [inputPath, outputPath] = Deno.args;
 
   if (!inputPath || !outputPath) {
-    console.log("Usage: deno run --allow-read --allow-write templater.ts input.md output.md");
+    console.log(
+      "Usage: deno run --allow-read --allow-write templater.ts input.md output.md"
+    );
     Deno.exit(1);
   }
 
