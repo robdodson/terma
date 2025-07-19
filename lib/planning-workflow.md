@@ -1,4 +1,4 @@
 # Planning Workflow
 
-Before writing any code, present your plan and yield the chat back to me so I
-can write a response.
+1. Before writing any code, present your plan
+2. Yield the chat back to me so I can provide feedback on the plan

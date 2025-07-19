@@ -24,16 +24,18 @@ Start by researching the issue:
 
 # Planning Workflow
 
-Before writing any code, present your plan and yield the chat back to me so I
-can write a response.
+1. Before writing any code, present your plan
+2. Yield the chat back to me so I can provide feedback on the plan
 
 # Implementation Workflow
 
-* Create a new branch with a descriptive name for your work
-* Break the work into logical phases/commits
-* Create a commit for each phase with clear commit messages
-* After each significant change, yield the chat back to me so I can review and
-  provide feedback
+1. Create a new branch with a descriptive name for your work
+2. Break the work into logical phases/commits
+3. Create a commit for each phase with clear commit messages
+4. After each commit, yield the chat back to me so I can review the code
+
+IMPORTANT: Do not attempt to do a git push until you have yielded the chat
+back and received a code review.
 
 ## Code Quality
 
